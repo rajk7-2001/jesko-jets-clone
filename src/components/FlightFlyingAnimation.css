@@ -1,0 +1,194 @@
+/* ---------------- SECTION ---------------- */
+
+.flight-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("https://cdn.prod.website-files.com/68b57ef5ef86011d9b251e8e/68bf31df0eb6b62331d8e35a_9557f7de34f540aa715092b1bcdbbf57_img_sky-hero.webp");
+  background-size: cover;
+  background-position: center top;
+  font-family: "Outfit", sans-serif;
+}
+
+/* ---------------- PIN CONTAINER ---------------- */
+
+.jet-switcher {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ---------------- LAYOUT STACK ---------------- */
+
+.layout2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.layout3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(241, 234, 224);
+}
+
+.layout3 {
+  margin-top: 60px;
+  opacity: 0;
+}
+
+/* ---------------- LAYOUT 2 ---------------- */
+
+.layout2-width {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10vw;
+  padding-top: 20vh;
+}
+
+.l2ts {
+  font-size: clamp(60px, 8vw, 135px);
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.fly-desc {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.design-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 50px;
+}
+
+.l2c2-line {
+  grid-column: 1 / 3;
+  height: 1px;
+  background: #777;
+}
+
+.ER650-text {
+  justify-self: end;
+}
+
+.Luxury-desc {
+  margin-top: 50px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ---------------- LAYOUT 3 ---------------- */
+
+.layout3-width {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  border-top: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10vw;
+  padding-top: 20px;
+}
+
+.l3ts {
+  font-size: clamp(50px, 7vw, 110px);
+  font-weight: 600;
+}
+
+.light-black {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+}
+
+.dark-black {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ---------------- JET ---------------- */
+
+.jet {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  /* Large base size */
+  z-index: 10;
+  pointer-events: none;
+}
+
+.img-jet {
+  width: 100%;
+  transform-origin: center;
+}
+
+/* ---------------- BLUEPRINT ---------------- */
+
+.spec-s_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  opacity: 0;
+  z-index: 10;
+}
+
+.blueprint {
+  width: 100%;
+}
+
+.mobile-blueprint {
+  display: none;
+}
+
+/* =========================
+   RESPONSIVE DESIGN (Animation Context)
+========================= */
+
+
+
+@media (max-width: 752px) {
+
+  .layout2-width,
+  .layout3-width {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 50px;
+  }
+
+  .l2ts,
+  .l3ts {
+    font-size: 40px;
+  }
+
+  .fly-desc {
+    font-size: 20px;
+  }
+
+  .jet {
+    width: 25%;
+  }
+
+  .spec-s_center {
+    display: none !important;
+  }
+
+  .mobile-blueprint {
+    display: flex !important;
+  }
+}

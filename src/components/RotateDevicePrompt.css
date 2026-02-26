@@ -1,0 +1,123 @@
+.rotate-device-prompt-overlay {
+    display: none;
+}
+
+@media (min-width: 753px) and (max-width: 999px) {
+
+    /* Hide the rest of the application completely to avoid GSAP measuring issues if possible, 
+     or just let it cover via high z-index and fixed position. */
+    body,
+    html {
+        overflow: hidden !important;
+    }
+
+    .rotate-device-prompt-overlay {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #1e1917;
+        /* Matches reference dark brown */
+        color: white;
+        z-index: 999999;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", sans-serif;
+    }
+
+    .rotate-device-prompt-container {
+        display: flex;
+        align-items: center;
+        gap: 15vw;
+        max-width: 900px;
+        width: 90%;
+        justify-content: center;
+    }
+
+    .text-section h2 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: -1px;
+        margin: 0;
+    }
+
+    .icon-section {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+    }
+
+    /* Phone shapes */
+    .phone {
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
+        position: relative;
+        background-color: transparent;
+    }
+
+    .landscape {
+        width: 130px;
+        height: 65px;
+        /* subtle pattern for screen */
+        background: repeating-linear-gradient(45deg,
+                rgba(255, 255, 255, 0.02),
+                rgba(255, 255, 255, 0.02) 2px,
+                transparent 2px,
+                transparent 8px);
+    }
+
+    .portrait {
+        width: 65px;
+        height: 130px;
+        background: repeating-linear-gradient(45deg,
+                rgba(255, 255, 255, 0.02),
+                rgba(255, 255, 255, 0.02) 2px,
+                transparent 2px,
+                transparent 8px);
+    }
+
+    /* Camera notches */
+    .camera-notch {
+        background-color: rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+        position: absolute;
+    }
+
+    .landscape-notch {
+        width: 6px;
+        height: 18px;
+        left: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .portrait-notch {
+        width: 18px;
+        height: 6px;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Arrow container */
+    .arrow-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+        /* adjust to align between the two phones */
+        position: relative;
+        top: -20px;
+    }
+
+    .degree-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+        margin-bottom: -5px;
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,65 @@
+.globe-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.globe_line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
+
+.globe-mask {
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    -webkit-mask-image: url('https://cdn.prod.website-files.com/68b57ef5ef86011d9b251e8e/68d5c52dbd2b12970456244c_46836cb9ab427d00bf1e97d11516b4cd_globe-over.webp');
+    mask-image: url('https://cdn.prod.website-files.com/68b57ef5ef86011d9b251e8e/68d5c52dbd2b12970456244c_46836cb9ab427d00bf1e97d11516b4cd_globe-over.webp');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    --mask-size: 200% 200%;
+
+    -webkit-mask-position: var(--mask-x) var(--mask-y);
+    mask-position: var(--mask-x) var(--mask-y);
+
+    -webkit-mask-size: var(--mask-size);
+    mask-size: var(--mask-size);
+}
+
+@keyframes rotateGlobe {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.globe_line svg {
+    animation: rotateGlobe 40s linear infinite;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+}
+
+.globe-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    animation: rotateGlobe 40s linear infinite;
+    transform-origin: center;
+}
