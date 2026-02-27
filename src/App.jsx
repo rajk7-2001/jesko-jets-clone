@@ -5,7 +5,7 @@ import Flightsymbol from "./assets/images/plane.png";
 import GlobalImage from "./assets/images/global image.png";
 import GlobalText from "./assets/images/global text.png";
 import JN from "./assets/images/jn.png";
-import Clouds from "./animations/cloudanimation";
+import Clouds from "./animations/CloudAnimation";
 import Layout4 from "./animations/AccordionExpandIcon";
 import FlightFlyingAnimation from "./components/FlightFlyingAnimation";
 import loopjetimage from "./assets/images/loop jet image.png";
