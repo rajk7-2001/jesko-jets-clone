@@ -1168,7 +1168,7 @@ html {
   }
 
   .row1 h1 {
-    
+
     font-size: 36px;
     line-height: 1.1;
     text-align: left;
@@ -1182,14 +1182,32 @@ html {
   }
 
   .col2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
     align-items: flex-start;
-    gap: 30px 15px;
+    gap: 30px;
     width: 100%;
     box-sizing: border-box;
     position: relative;
     z-index: 10;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+  }
+
+  .col2::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+  }
+
+  .col2>div {
+    width: 280px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    white-space: normal;
   }
 
   .col1 {
