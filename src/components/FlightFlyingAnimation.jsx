@@ -36,6 +36,9 @@ const FlightFlyingAnimation = () => {
       // ---------------- INITIAL STATES ----------------
       gsap.set(jetRef.current, {
         top: "150%",
+        left: "50%",
+        xPercent: -50,
+        yPercent: -50,
         scale: 2.5, // Already large (NO scale up)
       });
 
