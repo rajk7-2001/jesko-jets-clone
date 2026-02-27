@@ -294,7 +294,7 @@ function App() {
                   Jesko Jets<sup>®</sup> is a private aviation operator with
                   over 5,000 missions completed across 150+ countries. From
                   international executives to global industries, our clients
-                  trust us to deliver on time, every time.
+                  trust us to deliver on time, every&nbsp;time.
                 </h1>
               </div>
               <div className="row2">

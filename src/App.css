@@ -57,7 +57,7 @@ html {
 .navbar-width ul {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
@@ -86,16 +86,15 @@ html {
 
 @media (min-width: 753px) and (max-width: 1250px) {
   .navbar-width ul {
-    gap: 15px;
+    gap: 10px;
   }
 
   .navbar-width {
     font-size: 13px;
   }
 
-  .jets-placeholder,
   .jets {
-    font-size: 32px !important;
+    font-size: 22px !important;
   }
 
   .nav-link {
@@ -1169,6 +1168,7 @@ html {
   }
 
   .row1 h1 {
+    
     font-size: 36px;
     line-height: 1.1;
     text-align: left;
