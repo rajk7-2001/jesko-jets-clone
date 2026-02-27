@@ -5,6 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function layout4() {
   const [expanded, setExpanded] = useState(false);
@@ -22,6 +23,12 @@ export default function layout4() {
 
   const handleChange = (panel, new_image) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
+
+    // Give the DOM a moment to start animating the accordion open/close 
+    // before recalculating ScrollTrigger bounds.
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 300);
 
     if (isExpanded && new_image !== currentImage) {
       setNextImage(new_image);

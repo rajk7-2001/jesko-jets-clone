@@ -343,6 +343,7 @@ html {
   width: 100%;
   height: auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 .layout1 {
@@ -467,10 +468,11 @@ html {
 }
 
 .row1 h1 {
-  font-size: 70px;
-  text-align: justify;
-  line-height: 70px;
-  font-weight: 1000;
+  font-size: 85px;
+  text-align: left;
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -3px;
 }
 
 .layout2 {
@@ -770,6 +772,7 @@ html {
       #060505 70%,
       #000000 100%);
   position: relative;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -1166,8 +1169,11 @@ html {
   }
 
   .row1 h1 {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: left;
+    letter-spacing: -2px;
+    font-weight: 600;
   }
 
   .row2 {
@@ -1507,15 +1513,14 @@ html {
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 100px;
+    width: 100vw;
   }
 
   .countries-container {
     height: 60px;
-    width: 100vw;
+    width: 100%;
     margin-top: 40px;
-    margin-left: -5vw;
-    /* Adjust for padding to span full width */
-
+    margin-left: 0;
     /* Horizontal highlight fade */
     -webkit-mask-image: linear-gradient(to right,
         transparent 0%,
