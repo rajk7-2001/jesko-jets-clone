@@ -25,11 +25,9 @@ html {
   z-index: 4;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 .navbar {
   width: 88%;
@@ -49,10 +47,6 @@ html {
   font-weight: 700;
   color: white;
 }
-
-/* ========================================= */
-/* UL STYLING */
-/* ========================================= */
 
 .navbar-width ul {
   list-style: none;
@@ -106,17 +100,9 @@ html {
   display: none;
 }
 
-/* ========================================= */
-/* NAV ITEM */
-/* ========================================= */
-
 .nav-item {
   position: relative;
 }
-
-/* ========================================= */
-/* LINK */
-/* ========================================= */
 
 .nav-link {
   position: relative;
@@ -127,10 +113,6 @@ html {
   overflow: hidden;
   border-radius: 12px;
 }
-
-/* ========================================= */
-/* BACKGROUND SLIDE */
-/* ========================================= */
 
 .bg-slide {
   position: absolute;
@@ -147,40 +129,26 @@ html {
   transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-/* ========================================= */
-/* TEXT CONTAINER */
-/* ========================================= */
-
 .text-container {
   position: relative;
   display: block;
   overflow: hidden;
-
   height: 1em;
-  /* CRITICAL FIX */
   line-height: 1em;
-  /* MUST MATCH HEIGHT */
-
   z-index: 2;
 }
 
-/* TEXT */
 .text {
   display: block;
   transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
-/* Hidden duplicate text */
 .hover-text {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
 }
-
-/* ========================================= */
-/* HOVER EFFECT */
-/* ========================================= */
 
 .nav-item:hover .default {
   transform: translateY(-100%);
@@ -193,10 +161,6 @@ html {
 .nav-item:hover .bg-slide {
   transform: translateY(-100%);
 }
-
-/* ========================================= */
-/* CONTACT LINKS */
-/* ========================================= */
 
 .contact-link {
   text-decoration: none;
@@ -362,7 +326,6 @@ html {
 .content-width {
   width: 88%;
   margin: 0 auto;
-
 }
 
 .row1 {
@@ -474,37 +437,20 @@ html {
   letter-spacing: -3px;
 }
 
-.layout2 {
-  min-height: 100vh;
-  position: relative;
-  z-index: 6;
-  background: rgb(241, 234, 224);
-  color: black;
-}
 
-.layout2-width {
-  width: 88%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 400px 400px;
-  padding-top: 500px;
-  gap: 350px;
-}
 
 .l2c1 {
   display: grid;
-  grid-template-rows: 150px 200px;
+  grid-template-rows: auto auto;
   grid-template-columns: 1fr;
   font-size: 30px;
   font-weight: 600;
   line-height: 0.9;
-  height: 500px;
 }
 
 .l2c2 {
   display: grid;
-  grid-template-rows: 150px 50px 200px;
+  grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;
 }
 
@@ -531,11 +477,7 @@ html {
   justify-self: end;
 }
 
-.l2ts {
-  font-size: 135px;
-  line-height: 0.9;
-  font-weight: 700;
-}
+
 
 .Luxury-desc {
   margin-top: 50px;
@@ -549,35 +491,17 @@ html {
   justify-self: end;
 }
 
-.layout3 {
-  min-height: 100vh;
-  position: relative;
-  z-index: 6;
-  background: rgb(241, 234, 224);
-  color: black;
-}
 
-.layout3-width {
-  width: 88%;
-  border-top: 2px solid black;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 400px 400px;
-  gap: 350px;
-}
 
-.l3c1 {
-  height: 700px;
+.l3c1,
+.l3c2 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 1fr 1fr 1fr;
+  grid-template-rows: 40vh auto;
+  height: 100%;
 }
 
-.l3ts {
-  font-size: 110px;
-  line-height: 0.9;
-  font-weight: 600;
-}
+
 
 .l3-gulf {
   font-size: 30px;
@@ -588,15 +512,18 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-top: 1px solid black;
-  padding-top: 10px;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  gap: 25px 30px;
 }
 
 .c1c2 {
   display: grid;
   border-top: 1px solid black;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 30px 13px 13px 13px;
-  padding-top: 10px;
+  grid-auto-rows: auto;
+  padding-top: 15px;
+  gap: 10px 0;
 }
 
 .light-black {
@@ -616,15 +543,7 @@ html {
   grid-column-end: 3;
 }
 
-.l3c2 {
-  padding-top: 10px;
-  height: 400px;
-  width: 400px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 200px 1fr 1fr;
-  margin-left: 100px;
-}
+
 
 .layout4 {
   min-height: 100vh;
@@ -683,7 +602,6 @@ html {
   animation: slideUp 0.6s ease forwards;
 }
 
-/* Old image fades out */
 .fade-out {
   animation: fadeOut 0.6s ease forwards;
 }
@@ -757,10 +675,6 @@ html {
   max-width: 520px;
 }
 
-/* =========================
-   SECTION BACKGROUND
-========================= */
-
 .layout5 {
   width: 100%;
   height: 310vh;
@@ -774,39 +688,25 @@ html {
   overflow-x: hidden;
 }
 
-/* =========================
-   INNER WIDTH CONTAINER
-========================= */
-
 .layout5-width {
   width: 85%;
   margin: 0 auto;
 }
 
-/* =========================
-   LEFT + RIGHT WRAPPER
-========================= */
-
 .loop-wrapper {
   display: flex;
   align-items: center;
   gap: 20px;
-  /* space between left & right */
   padding-top: 40px;
   width: 600px;
   margin: 0 auto;
 }
-
-/* =========================
-   LEFT SIDE
-========================= */
 
 .loop {
   display: flex;
   align-items: center;
   gap: 20px;
   flex: 0 0 auto;
-  /* prevent stretching */
 }
 
 .left-side {
@@ -844,17 +744,11 @@ html {
   padding: 0 5px;
 }
 
-/* =========================
-   RIGHT SIDE COUNTRIES
-========================= */
-
 .countries-container {
   flex: 1;
-  /* take remaining width */
   height: 350px;
   overflow: hidden;
   position: relative;
-  /* center highlight fade */
   -webkit-mask-image: linear-gradient(to bottom,
       transparent 0%,
       rgba(0, 0, 0, 1) 35%,
@@ -1034,7 +928,6 @@ html {
   align-items: center;
   gap: 30px;
   padding-top: 15px;
-  /* space for the line */
 }
 
 .c1::before {
@@ -1042,9 +935,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  /* change to right: 0 if needed */
   width: 120px;
-  /* control border width here */
   height: 2px;
   background-color: #7a716e;
 }
@@ -1061,11 +952,7 @@ html {
   display: none;
 }
 
-
-
 @media (max-width: 752px) {
-
-
   .left-text .tagline {
     display: none;
   }
@@ -1162,13 +1049,11 @@ html {
     letter-spacing: 2px;
   }
 
-  /* Keep the Book Button visible above footer initially on mobile */
   .book-btn {
     bottom: 40px;
   }
 
   .row1 h1 {
-
     font-size: 36px;
     line-height: 1.1;
     text-align: left;
@@ -1193,14 +1078,11 @@ html {
     z-index: 10;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
-    /* Firefox */
     -ms-overflow-style: none;
-    /* IE/Edge */
   }
 
   .col2::-webkit-scrollbar {
     display: none;
-    /* Chrome/Safari */
   }
 
   .col2>div {
@@ -1286,7 +1168,9 @@ html {
   }
 
   .l3c1,
-  .l3c2 {
+  .l3c2,
+  .l3-top,
+  .l3-bottom {
     display: contents;
   }
 
@@ -1372,15 +1256,12 @@ html {
 
   .layout3-width .light-black {
     font-size: 13px;
-    /* Slightly larger heading */
     font-weight: 700;
     color: #b5b1a8;
-    /* Exact match the light beige text */
   }
 
   .layout3-width .dark-black {
     font-size: 15px;
-    /* Robust value text */
     font-weight: 800;
     color: #2b2b2b;
   }
@@ -1397,13 +1278,11 @@ html {
   .c1c2 .specs {
     grid-column: 1 / 3;
     margin-bottom: 25px;
-    /* The word "SPECIFICATION" also uses the light colour */
     font-size: 14px;
     font-weight: 700;
     color: #b5b1a8;
   }
 
-  /* Layout 2 typography and order overrides */
   .l2c1,
   .l2c2 {
     display: contents;
@@ -1473,13 +1352,11 @@ html {
     height: auto;
   }
 
-  /* Hide everything in navbar initially on mobile */
   .nav-links,
   .contact-links {
     display: none !important;
   }
 
-  /* Show mobile menu button */
   .mobile-menu-btn {
     display: flex;
     position: fixed;
@@ -1494,7 +1371,6 @@ html {
     cursor: pointer;
   }
 
-  /* Mobile menu active overlay */
   .nav-links.open,
   .contact-links.open {
     display: flex !important;
@@ -1523,7 +1399,6 @@ html {
     color: white;
   }
 
-  /* Layout 5 Mobile Redesign */
   .loop-wrapper {
     flex-direction: column;
     align-items: center;
@@ -1539,7 +1414,6 @@ html {
     width: 100%;
     margin-top: 40px;
     margin-left: 0;
-    /* Horizontal highlight fade */
     -webkit-mask-image: linear-gradient(to right,
         transparent 0%,
         rgba(0, 0, 0, 1) 35%,

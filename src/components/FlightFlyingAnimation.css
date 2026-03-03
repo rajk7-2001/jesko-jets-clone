@@ -53,7 +53,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10vw;
-  padding-top: 20vh;
+  padding-top: 50vh;
 }
 
 .l2ts {
@@ -98,8 +98,10 @@
   border-top: 2px solid black;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10vw;
+  gap: 30vw;
   padding-top: 20px;
+  height: calc(100vh - 160px);
+  box-sizing: border-box;
 }
 
 .l3ts {
@@ -124,9 +126,7 @@
   position: absolute;
   top: 120%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 35%;
-  /* Large base size */
+  width: clamp(250px, 35%, 450px);
   z-index: 10;
   pointer-events: none;
 }
@@ -144,6 +144,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30%;
+  max-width: 360px;
   opacity: 0;
   z-index: 10;
 }

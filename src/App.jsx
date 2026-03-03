@@ -55,10 +55,6 @@ function App() {
           0,
         );
 
-      /* ---------------- ROW 1 H1 SPLIT TEXT ANIMATION ---------------- */
-      // Avoid splitting by lines because it breaks text-align: justify and causes layout overlap.
-      // Splitting by words and chars keeps the native browser wrapping and justification intact.
-      // Animating the chars sequentially from left to right across the whole block will naturally reveal line-by-line.
       const row1H1 = document.querySelector(".row1 h1");
       if (row1H1) {
         document.fonts.ready.then(() => {
@@ -72,8 +68,8 @@ function App() {
               stagger: 0.01,
               scrollTrigger: {
                 trigger: row1H1,
-                start: "top bottom", // starts when top of text hits center
-                end: "bottom center", // ends when bottom of text hits center
+                start: "top bottom", 
+                end: "bottom center", 
                 scrub: true,
               },
             },
@@ -81,7 +77,6 @@ function App() {
         });
       }
 
-      /* ---------------- COUNTRIES LOOP + HIGHLIGHT ---------------- */
       const containerNode = document.querySelector(".countries-container");
       const track = ".countries-track";
       const allItems = gsap.utils.toArray(".countries p");
@@ -91,7 +86,6 @@ function App() {
         const isMobile = window.innerWidth <= 752;
 
         if (isMobile) {
-          // Horizontal scrolling for mobile
           const containerCenter =
             containerNode.getBoundingClientRect().left +
             containerNode.getBoundingClientRect().width / 2;
@@ -101,14 +95,13 @@ function App() {
             return containerCenter - (rect.left + rect.width / 2);
           });
 
-          // Set initial horizontal state
-          gsap.set(track, { x: targets[0], y: 0 }); // reset Y just in case
+          gsap.set(track, { x: targets[0], y: 0 });
           allItems[0].classList.add("active");
           if (allItems[items.length])
             allItems[items.length].classList.add("active");
 
           const tl = gsap.timeline({ repeat: -1 });
-          tl.to({}, { duration: 1 }); // Initial pause
+          tl.to({}, { duration: 1 }); 
 
           targets.forEach((x, i) => {
             if (i === 0) return;
@@ -134,7 +127,6 @@ function App() {
             }
           });
         } else {
-          // Vertical scrolling for desktop (original behavior)
           const containerCenter =
             containerNode.getBoundingClientRect().top +
             containerNode.getBoundingClientRect().height / 2;
@@ -144,14 +136,13 @@ function App() {
             return containerCenter - (rect.top + rect.height / 2);
           });
 
-          // Set initial vertical state
-          gsap.set(track, { y: targets[0], x: 0 }); // reset X just in case
+          gsap.set(track, { y: targets[0], x: 0 });
           allItems[0].classList.add("active");
           if (allItems[items.length])
             allItems[items.length].classList.add("active");
 
           const tl = gsap.timeline({ repeat: -1 });
-          tl.to({}, { duration: 1 }); // Initial pause
+          tl.to({}, { duration: 1 }); 
 
           targets.forEach((y, i) => {
             if (i === 0) return;
@@ -179,7 +170,6 @@ function App() {
         }
       }
 
-      /* ---------------- PIN GLOBAL GROUP ---------------- */
       ScrollTrigger.create({
         trigger: ".global-group",
         start: "center center",
@@ -190,13 +180,11 @@ function App() {
         refreshPriority: 40,
       });
 
-      /* ---------------- GLOBE & LOOP WRAPPER SCROLL ANIMATION ---------------- */
-      // Fade out loop-wrapper, and scale down globe
       gsap
         .timeline({
           scrollTrigger: {
             trigger: ".global-group",
-            start: "center center", // Start when global-group is pinned
+            start: "center center", 
             end: "+=100",
             scrub: 2,
             refreshPriority: 30,
@@ -205,7 +193,7 @@ function App() {
         .to(
           ".loop-wrapper",
           {
-            autoAlpha: 0, // Fade out the loop wrapper
+            autoAlpha: 0, 
             ease: "none",
           },
           0,
@@ -213,7 +201,7 @@ function App() {
         .to(
           ".global-text",
           {
-            y: "-30vh", // Move the text up
+            y: "-30vh", 
             ease: "none",
             duration: 3,
           },
@@ -222,20 +210,19 @@ function App() {
         .fromTo(
           ".global",
           {
-            scale: 1.5, // Initially scaled up
+            scale: 1.5, 
             y: 0,
             transformOrigin: "center center",
           },
           {
-            scale: 1.2, // Scale down the globe
-            y: "-20vh", // Move up to center of viewport
+            scale: 1.2, 
+            y: "-20vh", 
             ease: "none",
             duration: 3,
           },
           0,
         );
 
-      /* ---------------- PIN LAYOUT 5 OVERLAY AT END ---------------- */
       ScrollTrigger.create({
         trigger: ".layout5-overlay",
         start: "bottom bottom",
@@ -245,7 +232,7 @@ function App() {
         pinSpacing: false,
         refreshPriority: 20,
       });
-      /* ---------------- NAVBAR COLOR BOUNDARIES ---------------- */
+
       ScrollTrigger.create({
         trigger: ".flight-section",
         start: "top 5%",

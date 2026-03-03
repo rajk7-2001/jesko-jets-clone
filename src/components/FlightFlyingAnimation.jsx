@@ -187,77 +187,85 @@ const FlightFlyingAnimation = () => {
         <div className="layout3" ref={specsRef}>
           <div className="layout3-width">
             <div className="l3c1">
-              <div className="l3-gulf">Gulfstream</div>
-              <div className="l3-650ER l3ts">650ER</div>
-              <div className="mobile-blueprint">
-                <img
-                  src="https://cdn.prod.website-files.com/68b57ef5ef86011d9b251e8e/68d9baf6224ae03a0c240aad_img_jet-blue-print.png"
-                  alt="Blueprint Mobile"
-                />
-              </div>
-              <div className="c1c1">
-                <div>
-                  <div className="light-black">MAXIMUM OPERATING RANGE</div>
-                  <div className="dark-black">11,263 KM</div>
-                </div>
-                <div>
-                  <div className="light-black">SPEED</div>
-                  <div className="dark-black">480 KNOTS</div>
-                </div>
-                <div>
-                  <div className="light-black">PASSENGER CAPACITY</div>
-                  <div className="dark-black">
-                    UP TO 12 SEATS(+1 CABIN SERVER)
-                  </div>
-                </div>
-                <div>
-                  <div className="light-black">ENDURANCE</div>
-                  <div className="dark-black">
-                    14 HRS (MAXIMUM FOR EUROPEAN BASED AIRCRAFT)
-                  </div>
-                </div>
-                <div>
-                  <div className="light-black">BAGGAGE CAPACITY</div>
-                  <div className="dark-black">
-                    5.52 M<sup>3</sup>
-                  </div>
-                </div>
-                <div>
-                  <div className="light-black">CRUISING ALTITUDE</div>
-                  <div className="dark-black">15,544 M</div>
+              <div className="l3-top">
+                <div className="l3-gulf">Gulfstream</div>
+                <div className="l3-650ER l3ts">650ER</div>
+                <div className="mobile-blueprint">
+                  <img
+                    src="https://cdn.prod.website-files.com/68b57ef5ef86011d9b251e8e/68d9baf6224ae03a0c240aad_img_jet-blue-print.png"
+                    alt="Blueprint Mobile"
+                  />
                 </div>
               </div>
-              <div className="c1c2">
-                <div className="light-black specs">SPECIFICATION</div>
-                <div className="dark-black">CABIN LENGTH</div>
-                <div className="dark-black">
-                  14.05 M<sup>2</sup>
+              <div className="l3-bottom">
+                <div className="c1c1">
+                  <div>
+                    <div className="light-black">MAXIMUM OPERATING RANGE</div>
+                    <div className="dark-black">11,263 KM</div>
+                  </div>
+                  <div>
+                    <div className="light-black">SPEED</div>
+                    <div className="dark-black">480 KNOTS</div>
+                  </div>
+                  <div>
+                    <div className="light-black">PASSENGER CAPACITY</div>
+                    <div className="dark-black">
+                      UP TO 12 SEATS(+1 CABIN SERVER)
+                    </div>
+                  </div>
+                  <div>
+                    <div className="light-black">ENDURANCE</div>
+                    <div className="dark-black">
+                      14 HRS (MAXIMUM FOR EUROPEAN BASED AIRCRAFT)
+                    </div>
+                  </div>
+                  <div>
+                    <div className="light-black">BAGGAGE CAPACITY</div>
+                    <div className="dark-black">
+                      5.52 M<sup>3</sup>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="light-black">CRUISING ALTITUDE</div>
+                    <div className="dark-black">15,544 M</div>
+                  </div>
                 </div>
-                <div className="dark-black">CABIN WIDTH</div>
-                <div className="dark-black">
-                  2.49 M<sup>2</sup>
-                </div>
-                <div className="dark-black">CABIN HEIGHT</div>
-                <div className="dark-black">
-                  1.92 M<sup>2</sup>
+                <div className="c1c2">
+                  <div className="light-black specs">SPECIFICATION</div>
+                  <div className="dark-black">CABIN LENGTH</div>
+                  <div className="dark-black">
+                    14.05 M<sup>2</sup>
+                  </div>
+                  <div className="dark-black">CABIN WIDTH</div>
+                  <div className="dark-black">
+                    2.49 M<sup>2</sup>
+                  </div>
+                  <div className="dark-black">CABIN HEIGHT</div>
+                  <div className="dark-black">
+                    1.92 M<sup>2</sup>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="l3c2">
-              <div className="l3-gulf">
-                Ultra-long-range <br /> Aircraft
+              <div className="l3-top">
+                <div className="l3-gulf">
+                  Ultra-long-range <br /> Aircraft
+                </div>
               </div>
-              <div
-                className="dark-black"
-                style={{ borderTop: "1px solid black" }}
-              >
-                DIRECT ACCESS TO <br /> PRIVATE TRAVEL
-              </div>
-              <div className="dark-black">
-                A true time-saving machine it brings Tokyo <br /> and New York
-                an hour closer, and at 92% of <br /> the speed of sound, it
-                can circle the globe <br /> with just a single stop.
+              <div className="l3-bottom">
+                <div
+                  className="dark-black"
+                  style={{ borderTop: "1px solid black", paddingTop: "15px" }}
+                >
+                  DIRECT ACCESS TO <br /> PRIVATE TRAVEL
+                </div>
+                <div className="dark-black" style={{ marginTop: "20px", fontWeight: "600", color: "#333", fontSize: "14px" }}>
+                  A true time-saving machine it brings Tokyo <br /> and New York
+                  an hour closer, and at 92% of <br /> the speed of sound, it
+                  can circle the globe <br /> with just a single stop.
+                </div>
               </div>
             </div>
           </div>
